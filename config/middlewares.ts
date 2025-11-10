@@ -1,6 +1,13 @@
 export default [
   'strapi::logger',
   'strapi::errors',
+   {
+    name: 'strapi::cors',
+    config: {
+      enabled: true,
+      origin: ['*'],
+    },
+  },
   'strapi::security',
   'strapi::cors',
   'strapi::poweredBy',
